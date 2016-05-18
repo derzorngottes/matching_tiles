@@ -96,8 +96,11 @@ $(document).ready(function() {
     $('#container').append(skellyWin);
   }
 
-  $('.tileBack').click(function() {
+//~~~Attempting here to bind the click item to cause a delay on flips
 
+  $('.tileBack').bind({
+    click: function() {
+//  $('.tileBack').click(function() {
     if (curTile === 'none'){
       $(this).parent().find('.tileBack').css('display', 'none');
       $(this).parent().find('.tileBack').addClass('prevBack');
@@ -136,6 +139,7 @@ $(document).ready(function() {
     }
     console.log(curTile + ' ' + nextTile);
   });
+//  });
 });
 
 
